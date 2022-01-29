@@ -5,7 +5,7 @@ import './button.css'
 const Button=(Direction)=>{
     
 return(
-    <button class="groupButtons_button" >click</button>
+    <button>click</button>
 )
 }
 

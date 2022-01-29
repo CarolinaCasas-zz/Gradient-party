@@ -1,14 +1,15 @@
 import './App.css';
-import EditGradiantBar from './SectionComponents/EditGradiantBar';
-import Footer from './SectionComponents/Footer';
-import Header from './SectionComponents/Header';
-import PrincipalSection from './SectionComponents/InfoSection';
+import EditGradiantBar from './SectionPage/EditGradiantBar';
+import Footer from './SectionPage/Footer';
+import Header from './SectionPage/Header';
+import InfoSection from './SectionPage/InfoSection';
+
 function App() {
   return (
     <div className="App">
       <Header/>
       <EditGradiantBar/>
-      <PrincipalSection/>
+      <InfoSection/>
       <Footer/>
     </div>
   );
