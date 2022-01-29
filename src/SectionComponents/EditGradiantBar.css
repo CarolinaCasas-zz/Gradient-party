@@ -1,31 +1,33 @@
 .EditBar{
+    background-color: aqua;
     display: flex;
     flex-direction: column;
-    background-color: aqua;
     width:100vw; height:50vh; overflow: scroll;
 }
 
 .EditBar_title{
     font-size: 8vw;
+    margin-left: 5%;
 
 }
 
 .EditBar_subtitle{
     font-size: 110%;
+    margin-left: 6%;
 }
 
 
 .EditBar_groupButtons_grid{
     display: grid;
-    margin: 5%;
     grid-template-columns: 25% 25% 25%;
     justify-items: center;
+    margin: 5%;
 }
 
 .group_button{
-    width: 100%;
-    height: 100%;
     font-size: small;
+    height: 100%;
+    width: 100%;
 }
 
 

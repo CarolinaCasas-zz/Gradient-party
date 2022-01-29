@@ -1,11 +1,10 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Components/Button";
 import "./EditGradiantBar.css";
-
 const EditGradiantBar = () => {
     return (
         <section className="EditBar">
-            <h1 className="EditBar_title">Gradient <br /> Party</h1>
+    
             <span className="EditBar_subtitle">Style</span>
             <section className="EditBar_groupButtons_grid">
                 <Button />
