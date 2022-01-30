@@ -2,16 +2,17 @@ import React, { useState } from "react";
 import "./EditGradiantBar.css";
 
 const EditGradiantBar = () => {
- /*    const [direction, setdirection]= useState("");
-    const [style, setstyle]= useState(""); */
+   const [direction, setdirection]= useState("");
+    const [style, setstyle]= useState("linear-gradient"); 
    const [color1, setColor1]= useState("#9e48e5"); 
    const [color2, setColor2]= useState("#580909"); 
 
 const sampleColorStyle ={
-    backgroundImage: "linear-gradient("+color1+","+color2+")",
+    backgroundImage: style+"("+direction+color1+","+color2+")",
 };
 
-console.log(color1)
+
+console.log(direction)
     return (
        
         <>
@@ -19,20 +20,20 @@ console.log(color1)
 
                 <span className="EditBar_subtitle">Style</span>
                 <section className="EditBar_groupButtons_grid">
-                    <button>Linear></button>
-                    <button>Circular</button>
+                    <button onClick={()=>setstyle("linear-gradient")}>Linear></button>
+                    <button onClick={()=>console.log(setstyle("radial-gradient"))}>Circular</button>
                 </section>
                 <span className="EditBar_subtitle" >Direction</span>
-                <section className="EditBar_groupButtons_grid">
-                <button>Up-left</button>
-                <button>Up</button>
-                <button>Up-right</button>
-                <button>left</button>
+                <section className="EditBar_groupButtons_grid" onClick={(e)=>{console.log(setdirection(e.target.dataset.direction))}}>
+                <button data-direction="to top left,">Up-left</button>
+                <button data-direction="to top,">Up</button>
+                <button data-direction="to top right,">Up-right</button>
+                <button data-direction="to left,">left</button>
                 <button>center</button>
-                <button>rigth</button>
-                <button>Down-left</button>
-                <button>Dowin</button>
-                <button>Down-Rigth</button>
+                <button data-direction="to right,">rigth</button>
+                <button data-direction="to bottom left,">Down-left</button>
+                <button data-direction="to bottom,">Dowin</button>
+                <button data-direction="to bottom right,">Down-Rigth</button>
                 </section>
                 <span className="EditBar_subtitle">Colors </span>
                 <section className="EditBar_groupButtons_grid">
