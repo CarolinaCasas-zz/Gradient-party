@@ -19,7 +19,7 @@
 
 .EditBar_groupButtons_grid{
     display: grid;
-    grid-template-columns: 25% 25% 25%;
+    grid-template-columns: 30% 30% 30%;
     justify-items: center;
     margin: 5%;
 }
@@ -31,8 +31,56 @@
 }
 
 .sampleColor{
-    width: 100vw;
+    align-items: flex-end;
+    display: flex;
     height: 40vh;
+    justify-content: flex-end;
+    width: 100vw;
 }
 
+.sampleColor_scrollMesagge{
+color: rgb(182, 182, 182);
+font-size: 100%;
+margin: 2%;
+}
+
+button{
+    width: 20vw;
+    height: 5vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .contentSampleColor{
+display: flex;
+
+    }
+    .EditBar{
+        width:30vw; height:70vh;
+    }
+
+    .sampleColor{
+        position: absolute;
+        margin-left: 30%;
+        top: 0px;
+        height: 100vh;
+        width: 70vw;
+    }
+
+    .EditBar_groupButtons_grid{
+        grid-template-columns: 30% 30% 30%;
+        margin: 5%;
+    }
+
+    button{
+        width: 7vw;
+        height: 5vh;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+  }
+  
 
