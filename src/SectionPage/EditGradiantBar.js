@@ -1,39 +1,39 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 import "./EditGradiantBar.css";
 
 const EditGradiantBar = () => {
    const [direction, setdirection]= useState("");
-    const [style, setstyle]= useState("linear-gradient"); 
+   const [styles, setstyles]= useState("linear-gradient"); 
    const [color1, setColor1]= useState("#9e48e5"); 
    const [color2, setColor2]= useState("#580909"); 
 
-const sampleColorStyle ={
-    backgroundImage: style+"("+direction+color1+","+color2+")",
+let sampleColorStyle ={
+    backgroundImage: styles+"("+direction+color1+","+color2+")", 
 };
 
-
-console.log(direction)
+console.log(sampleColorStyle);
     return (
        
         <>
             <section className="EditBar">
 
                 <span className="EditBar_subtitle">Style</span>
-                <section className="EditBar_groupButtons_grid">
-                    <button onClick={()=>setstyle("linear-gradient")}>Linear></button>
-                    <button onClick={()=>console.log(setstyle("radial-gradient"))}>Circular</button>
+                <section className="EditBar_groupButtons_grid" onClick={(e)=>{setstyles(e.target.dataset.style)}}>
+                    <button data-style="linear-gradient">Linear></button>
+                    <button data-style="radial-gradient">Circular</button>
                 </section>
                 <span className="EditBar_subtitle" >Direction</span>
-                <section className="EditBar_groupButtons_grid" onClick={(e)=>{console.log(setdirection(e.target.dataset.direction))}}>
-                <button data-direction="to top left,">Up-left</button>
-                <button data-direction="to top,">Up</button>
-                <button data-direction="to top right,">Up-right</button>
-                <button data-direction="to left,">left</button>
-                <button>center</button>
-                <button data-direction="to right,">rigth</button>
-                <button data-direction="to bottom left,">Down-left</button>
-                <button data-direction="to bottom,">Dowin</button>
-                <button data-direction="to bottom right,">Down-Rigth</button>
+                <section className="EditBar_groupButtons_grid" onClick={(e)=>{styles==="radial-gradient" ? setdirection(e.target.dataset.radialdirection): setdirection(e.target.dataset.direction)}}>
+                <button data-direction="to top left," data-radialdirection="at top left,">Up-left</button>
+                <button data-direction="to top," data-radialdirection="at top,">Up</button>
+                <button data-direction="to top right, "data-radialdirection="at top right,">Up-right</button>
+                <button data-direction="to left," data-radialdirection="at left,">left</button>
+                <button style={{visibility: styles==="radial-gradient"?"visible":"hidden"}} data-radialdirection="">center</button>
+                <button data-direction="to right," data-radialdirection="at right,">rigth</button>
+                <button data-direction="to bottom left," data-radialdirection="at bottom left,">Down-left</button>
+                <button data-direction="to bottom," data-radialdirection="at bottom,">Down</button>
+                <button data-direction="to bottom right," data-radialdirection="at bottom right,">Down-Rigth</button>
                 </section>
                 <span className="EditBar_subtitle">Colors </span>
                 <section className="EditBar_groupButtons_grid">
