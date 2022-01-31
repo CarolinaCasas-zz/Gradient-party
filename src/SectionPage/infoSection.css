@@ -6,7 +6,6 @@
 
 @media only screen and (min-width: 800px) {
     .infoSection{
-        position: absolute;
         width: 100vw;
         top: 100vh;
      }

@@ -61,7 +61,7 @@ button{
     .EditBar{
         top: 80px;
         left: 10px;
-        width:30vw; height:70vh;
+        width:30vw; height:80vh;
     }
 
     .sampleColor{
@@ -82,7 +82,7 @@ button{
         height: 5vh;
         margin-top: 2%;
         margin-bottom: 2%;
-        font-size: 130%;
+        font-size: 110%;
     }
   }
   
