@@ -1,5 +1,4 @@
 .EditBar{
-    background-color: aqua;
     display: flex;
     flex-direction: column;
     width:100vw; height:50vh; overflow: scroll;
@@ -12,7 +11,7 @@
 }
 
 .EditBar_subtitle{
-    font-size: 110%;
+    font-size: 170%;
     margin-left: 6%;
 }
 
@@ -33,14 +32,14 @@
 .sampleColor{
     align-items: flex-end;
     display: flex;
-    height: 40vh;
+    height: 35vh;
     justify-content: flex-end;
     width: 100vw;
 }
 
 .sampleColor_scrollMesagge{
 color: rgb(182, 182, 182);
-font-size: 100%;
+font-size: 200%;
 margin: 2%;
 }
 
@@ -49,16 +48,19 @@ button{
     height: 5vh;
     margin-top: 2%;
     margin-bottom: 2%;
+    font-size: 100%;
 }
 
 
 @media only screen and (min-width: 800px) {
     
     .contentSampleColor{
-display: flex;
+        display: flex;
 
     }
     .EditBar{
+        top: 80px;
+        left: 10px;
         width:30vw; height:70vh;
     }
 
@@ -80,6 +82,7 @@ display: flex;
         height: 5vh;
         margin-top: 2%;
         margin-bottom: 2%;
+        font-size: 130%;
     }
   }
   

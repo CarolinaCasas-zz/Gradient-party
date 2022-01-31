@@ -1,22 +1,32 @@
 import React, { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard"
+import { useTheme } from "../context/ThemeProvider";
 import "./EditGradiantBar.css";
 
+
 const EditGradiantBar = () => {
+    const{theme}= useTheme();
     const [direction, setdirection] = useState("");
     const [styles, setstyles] = useState("linear-gradient");
     const [color1, setColor1] = useState("#9e48e5");
     const [color2, setColor2] = useState("#580909");
 
 
+        
+    const randomColor=()=>{
+        const newRandomColor1="#"+Math.floor(Math.random()*16777215).toString(16);
+        const newRandomColor2="#"+Math.floor(Math.random()*17767116).toString(16);
+        setColor1(newRandomColor1);
+        setColor2(newRandomColor2);
+    }
+
     const sampleColorStyle = {
         backgroundImage: styles + "(" + direction + color1 + "," + color2 + ")",
     };
 
-    console.log(sampleColorStyle);
     return (
 
-        <div className="contentSampleColor">
+        <div className="contentSampleColor" style={{backgroundColor: theme.background, color: theme.textColor}}>
             <section className="EditBar">
 
                 <span className="EditBar_subtitle">Style</span>
@@ -40,7 +50,7 @@ const EditGradiantBar = () => {
                 <section className="EditBar_groupButtons_grid">
                     <input type="color" value={color1} onChange={(e) => setColor1(e.target.value)} />
                     <input type="color" value={color2} onChange={(e) => setColor2(e.target.value)} />
-                    <button>Random</button>
+                    <button onClick={randomColor}>Random</button>
                 </section>
                 <span className="EditBar_subtitle">Output format</span>
                 <section className="EditBar_groupButtons_grid">
