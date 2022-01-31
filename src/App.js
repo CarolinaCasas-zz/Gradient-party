@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+/* import { useState } from 'react'; */
 import './App.css';
+import EditGradiantBar from './SectionPage/EditGradiantBar';
+import Footer from './SectionPage/Footer';
+import Header from './SectionPage/Header';
+import InfoSection from './SectionPage/InfoSection';
+import ThemeProvider from './context/ThemeProvider';
+
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <ThemeProvider>
+      <div className="App">
+        <Header />
+        <EditGradiantBar />
+        <InfoSection />
+        <Footer />
+      </div>
+    </ThemeProvider>
+
+
   );
 }
 
