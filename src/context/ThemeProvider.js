@@ -5,7 +5,7 @@ import moon from "../img/moon.png"
 
 const themes = {
     light: {
-        background: "white",
+        background: "#d9d9d9",
         textColor: "#000000",
         linkImg:moon,
     },
