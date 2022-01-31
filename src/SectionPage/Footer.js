@@ -6,9 +6,8 @@ function Footer() {
     return (
         <>
             <footer style={{ backgroundColor: theme.background, color: theme.textColor }}>
-                <h4>2022 CSS-Gradient-party</h4>
+                <h4>®2022 CSS-Gradient-party</h4>
                 <h4>Ternms and Privacy</h4>
-                <hr/>
             </footer>
         </>
     );
