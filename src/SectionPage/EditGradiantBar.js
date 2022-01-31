@@ -12,14 +12,14 @@ const EditGradiantBar = () => {
     const [color2, setColor2] = useState("#580909");
 
 
-        
+        //Elije los colores al azar 
     const randomColor=()=>{
         const newRandomColor1="#"+Math.floor(Math.random()*16777215).toString(16);
         const newRandomColor2="#"+Math.floor(Math.random()*17767116).toString(16);
         setColor1(newRandomColor1);
         setColor2(newRandomColor2);
     }
-
+        //Integra el estilo al Div de muestra de gradiente
     const sampleColorStyle = {
         backgroundImage: styles + "(" + direction + color1 + "," + color2 + ")",
     };
