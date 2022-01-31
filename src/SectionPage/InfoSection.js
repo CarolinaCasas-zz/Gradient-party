@@ -1,4 +1,4 @@
-import AboutCSS from "../ArticleComponents/AbaotCSS";
+import AboutCSS from "../ArticleComponents/AboutCSS";
 import BrowserCompability from "../ArticleComponents/BrowserCompability";
 import WhatIsaGradient from "../ArticleComponents/WhatIsaGradient";
 import { useTheme } from "../context/ThemeProvider";
