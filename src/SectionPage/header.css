@@ -1,0 +1,29 @@
+.EditBar_title{
+    margin: 5%;
+    font-size: 250%;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+img{
+    margin-right: 50px;
+    margin-top: 7%;
+    width: 9%;
+    height: 4%;
+}
+
+@media only screen and (min-width: 800px) {
+    .EditBar_title{
+        width: 30vw;
+        font-size: 30px;
+    }
+    
+    header{
+        width: 30vw;
+    }
+}

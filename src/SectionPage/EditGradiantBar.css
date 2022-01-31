@@ -1,0 +1,94 @@
+.EditBar{
+    display: flex;
+    flex-direction: column;
+    width:100vw; height:50vh; overflow: scroll;
+}
+
+.EditBar_title{
+    font-size: 8vw;
+    margin-left: 5%;
+
+}
+
+.EditBar_subtitle{
+    font-size: 170%;
+    margin-left: 6%;
+}
+
+
+.EditBar_groupButtons_grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center;
+    margin: 5%;
+}
+
+.group_button{
+    font-size: small;
+    height: 100%;
+    width: 100%;
+}
+
+.sampleColor{
+    align-items: flex-end;
+    display: flex;
+    height: 35vh;
+    justify-content: flex-end;
+    width: 100vw;
+}
+
+.sampleColor_scrollMesagge{
+color: rgb(216, 216, 216);
+font-size: 200%;
+margin: 2%;
+}
+
+button{
+    width: 20vw;
+    height: 5vh;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 100%;
+}
+
+button:focus, form button:active{
+    background-color:#6300e4;
+    color: #fbfcfc;
+}
+
+
+@media only screen and (min-width: 800px) {
+    
+    .contentSampleColor{
+        display: flex;
+
+    }
+    .EditBar{
+        top: 80px;
+        left: 10px;
+        width:30vw; height:80vh;
+    }
+
+    .sampleColor{
+        position: absolute;
+        margin-left: 30%;
+        top: 0px;
+        height: 100vh;
+        width: 70vw;
+    }
+
+    .EditBar_groupButtons_grid{
+        grid-template-columns: 30% 30% 30%;
+        margin: 5%;
+    }
+
+    button{
+        width: 7vw;
+        height: 5vh;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-size: 100%;
+    }
+  }
+  
+
