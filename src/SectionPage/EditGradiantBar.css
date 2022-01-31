@@ -38,7 +38,7 @@
 }
 
 .sampleColor_scrollMesagge{
-color: rgb(182, 182, 182);
+color: rgb(216, 216, 216);
 font-size: 200%;
 margin: 2%;
 }
@@ -49,6 +49,11 @@ button{
     margin-top: 2%;
     margin-bottom: 2%;
     font-size: 100%;
+}
+
+button:focus, form button:active{
+    background-color:#6300e4;
+    color: #fbfcfc;
 }
 
 
@@ -82,7 +87,7 @@ button{
         height: 5vh;
         margin-top: 2%;
         margin-bottom: 2%;
-        font-size: 110%;
+        font-size: 100%;
     }
   }
   
